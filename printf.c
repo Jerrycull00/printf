@@ -7,12 +7,12 @@
 int _printf(const char * const format, ...)
 {
 	print_t m[] = {
-		{"%s", printf_string}, {"%c", printf_char},
-		{"%%", printf_37},
-		{"%i", printf_int}, {"%d", printf_dec}, {"%r", printf_srev},
-		{"%R", printf_rot13}, {"%b", printf_bin}, {"%u", printf_unsigned},
-		{"%o", printf_oct}, {"%x", printf_hex}, {"%X", printf_HEX},
-		{"%S", printf_exclusive_string}, {"%p", printf_pointer}
+		{"%s", _printf_string}, {"%c", _printf_char},
+		{"%%", _printf_37},
+		{"%i", _printf_int}, {"%d", _printf_dec}, {"%r", _printf_srev},
+		{"%R", _printf_rot13}, {"%b", _printf_bin}, {"%u", _printf_unsigned},
+		{"%o", _printf_oct}, {"%x", _printf_hex}, {"%X", _printf_HEX},
+		{"%S", _printf_exclusive_string}, {"%p", _printf_pointer}
 	};
 	va_list args;
 	int i = 0, j, len = 0;
@@ -20,7 +20,6 @@ int _printf(const char * const format, ...)
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-	Here;
 	while (format[i] != '\0')
 	{
 		j = 13;
@@ -30,13 +29,16 @@ int _printf(const char * const format, ...)
 			{
 				len += m[j].f(args);
 				i = i + 2;
-				goto Here;
+				break;
 			}
 			j--;
 		}
-		_putchar(format[i]);
-		len++;
-		i++;
+		if (j == -1)
+		{
+			_putchar(format[i]);
+			len++;
+			i++;
+		}
 	}
 	va_end(args);
 	return (len);
