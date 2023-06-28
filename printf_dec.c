@@ -4,7 +4,7 @@
  *@args: argument to print
  *Return: number of characters printed
  **/
-int printf_dec(va_list args)
+int _printf_dec(va_list args)
 {
 	int num = va_arg(args, int);
 	int reversed = 0, digit, revDigits, temp;

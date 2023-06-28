@@ -14,8 +14,15 @@
 typedef struct format
 {
 	char *ident;
-	int (*f)();
+	int (*f)(va_list args);
 } print_t;
 int _printf(const char *format, ...);
 int _putchar(char c);
+int _printf_char(va_list val);
+int _printf_int(va_list args);
+int _printf_dec(va_list args);
+int _strlen(char *s);
+int _printf_37(void);
+int _strlenc(const char *s);
+
 #endif
