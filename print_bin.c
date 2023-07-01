@@ -4,6 +4,7 @@
  *@bi: va_list argument containing the decimal number
  * Return: number of characters printed
  **/
+
 int _printf_bin(va_list bi)
 {
 	unsigned int decimalNumber = va_arg(bi, unsigned int);
@@ -33,4 +34,3 @@ int _printf_bin(va_list bi)
 	}
 	return (count);
 }
-
