@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * printf_37 - prints the char 37.
+ * _printf_37 - prints the char 37.
  * Return: 1.
  */
-int printf_37(void)
+int _printf_37(va_list args __attribute__((unused)))
 {
-	_putchar(37);
+	_putchar('%');
 	return (1);
 }

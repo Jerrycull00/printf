@@ -22,7 +22,20 @@ int _printf_char(va_list val);
 int _printf_int(va_list args);
 int _printf_dec(va_list args);
 int _strlen(char *s);
-int _printf_37(void);
+int _printf_37(va_list args __attribute__((unused)));
 int _strlenc(const char *s);
-
+int _printf_bin(va_list bi);
+int _printf_octal(va_list oct);
+int _printf_hexa(unsigned int n, unsigned int c);
+int _printf_hex(va_list x);
+int _strlenc(const char *s);
+int _printf_HEX(va_list X);
+int _printf_string(va_list val);
+int _printf_srev(va_list args);
+int _printf_pointer(va_list val);
+int _printf_hex_aux(unsigned long int num);
+int _printf_rot13(va_list args);
+int _printf_exclusive_string(va_list val);
+int _printf_unsigned(va_list args);
+int _printf_HEX_aux(unsigned int num);
 #endif
