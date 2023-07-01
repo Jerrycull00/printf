@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- *printf_dec - prints decima
+ *_printf_dec - prints decima
  *@args: argument to print
  *Return: number of characters printed
  **/
+
 int _printf_dec(va_list args)
 {
 	int num = va_arg(args, int);
