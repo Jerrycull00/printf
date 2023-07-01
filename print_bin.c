@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- *_print_bin - convert decimal to binary and print
- *@bi: va_list argument containing the decimal number
+ * _printf_bin - convert decimal to binary and print
+ * @bi: va_list argument containing the decimal number
  * Return: number of characters printed
  **/
 
