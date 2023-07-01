@@ -16,6 +16,7 @@ typedef struct format
 	char *ident;
 	int (*f)(va_list args);
 } print_t;
+
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _printf_char(va_list val);
@@ -38,4 +39,5 @@ int _printf_rot13(va_list args);
 int _printf_exclusive_string(va_list val);
 int _printf_unsigned(va_list args);
 int _printf_HEX_aux(unsigned int num);
+
 #endif
