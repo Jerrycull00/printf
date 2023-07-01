@@ -4,6 +4,7 @@
  *@val: argumen t.
  *Return: the length of the string.
  **/
+
 int _printf_exclusive_string(va_list val)
 {
 	char *s;
