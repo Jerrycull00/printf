@@ -4,6 +4,7 @@
  * @num: number to print.
  * Return: counter.
  **/
+
 int _printf_HEX_aux(unsigned int num)
 {
 	int i;
