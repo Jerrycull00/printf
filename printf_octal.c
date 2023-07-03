@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *_print_octal - convert decimal to octal and print
- *@oct: va_list argument containing the decimal number
- *Return: number of characters printed
+ * _print_octal - convert decimal to octal and print
+ * @oct: va_list argument containing the decimal number
+ * Return: number of characters printed
  **/
 int _printf_octal(va_list oct)
 {
