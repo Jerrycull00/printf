@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- *printf_int - prints integer
- *@args: argument to print
- *Return: number of characters printed
+ * _printf_int - prints integer
+ * @args: argument to print
+ * Return: number of characters printed
  **/
+
 int _printf_int(va_list args)
 {
 	int num = va_arg(args, int);
